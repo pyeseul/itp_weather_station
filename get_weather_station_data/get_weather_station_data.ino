@@ -61,20 +61,21 @@ void loop() {
 
 void getData() {
   
-  // add the query to the route:
+  // set path and content type
   String path = "/itpower-data/by-time";
   String contentType = "application/json";
 
+  // Set the date/time range. Get only 1-2 at a time, otherwise, the memory can't deal with it.
   String dateFrom = "4-26-2020 23:20:00";
   String dateTo = "4-26-2020 23:30:00";
   
-  // Assembling unique creadentials to access server to get data
+  // Assemble the query
   String mac = "\"macAddress\":\"" + mac_identity + "\"";
   String session = "\"sessionKey\":" + session_identity + "";
   String dFrom = "\"dateFrom\":\"" + dateFrom + "\"";
   String dTo = "\"dateTo\":\"" + dateTo + "\"";  
 
-  //Combining GET request data as a string object
+  //Combining GET request data as a JSON string object
   String getBody = "{" + mac + "," + session + "," + dFrom + "," + dTo + "}";
 
   Serial.println(path);
