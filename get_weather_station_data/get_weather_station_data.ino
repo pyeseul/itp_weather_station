@@ -65,8 +65,8 @@ void getData() {
   String path = "/itpower-data/by-time";
   String contentType = "application/json";
 
-  String dateFrom = "4-22-2020";
-  String dateTo = "4-23-2020";
+  String dateFrom = "4-26-2020 23:20:00";
+  String dateTo = "4-26-2020 23:30:00";
   
   // Assembling unique creadentials to access server to get data
   String mac = "\"macAddress\":\"" + mac_identity + "\"";
